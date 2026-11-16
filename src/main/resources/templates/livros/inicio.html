@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biblioteca - Início</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+<header class="cabecalho">
+    <h1>Biblioteca Central</h1>
+    <p>Seu espaço para descobrir novas histórias.</p>
+</header>
+
+<main class="container">
+
+    <section class="boas-vindas">
+        <h2>Bem-vindo à nossa biblioteca!</h2>
+
+        <p>
+            Aqui você pode consultar informações sobre livros,
+            autores, categorias e empréstimos.
+        </p>
+
+        <a th:href="@{/livros/livro}" class="botao">
+            Consultar livro
+        </a>
+    </section>
+
+    <section class="destaque">
+        <h2>Livro em destaque</h2>
+
+        <h3>O Hobbit</h3>
+
+        <p>
+            Uma aventura fantástica escrita por J.R.R. Tolkien,
+            que acompanha a jornada de Bilbo Bolseiro.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>Biblioteca Central - Sistema de Consulta</p>
+</footer>
+
+</body>
+</html>

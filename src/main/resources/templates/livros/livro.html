@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biblioteca - Informações do Livro</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+<header class="cabecalho">
+    <h1>Biblioteca Central</h1>
+    <p>Informações do acervo</p>
+</header>
+
+<main class="container">
+
+    <h2 class="titulo-pagina">Detalhes do cadastro</h2>
+
+    <section class="cartao">
+        <h2>Livro</h2>
+        <p>Título: <span th:text="${livro.titulo}"></span></p>
+        <p>Autor: <span th:text="${livro.autor}"></span></p>
+        <p>ISBN: <span th:text="${livro.isbn}"></span></p>
+    </section>
+
+    <section class="cartao">
+        <h2>Autor</h2>
+        <p>Nome: <span th:text="${autor.nome}"></span></p>
+        <p>Nacionalidade: <span th:text="${autor.nacionalidade}"></span></p>
+        <p>Data de nascimento: <span th:text="${autor.dataNascimento}"></span></p>
+    </section>
+
+    <section class="cartao">
+        <h2>Categoria</h2>
+        <p>Nome: <span th:text="${categoria.nome}"></span></p>
+        <p>Descrição: <span th:text="${categoria.descricao}"></span></p>
+        <p>Código: <span th:text="${categoria.codigo}"></span></p>
+    </section>
+
+    <section class="cartao">
+        <h2>Usuário</h2>
+        <p>Nome: <span th:text="${usuario.nome}"></span></p>
+        <p>Email: <span th:text="${usuario.email}"></span></p>
+        <p>CPF: <span th:text="${usuario.cpf}"></span></p>
+    </section>
+
+    <section class="cartao">
+        <h2>Empréstimo</h2>
+        <p>Data do empréstimo: <span th:text="${emprestimo.dataEmprestimo}"></span></p>
+        <p>Data da devolução: <span th:text="${emprestimo.dataDevolucao}"></span></p>
+        <p>Status: <span th:text="${emprestimo.status}"></span></p>
+        <p>Livro: <span th:text="${emprestimo.livro}"></span></p>
+        <p>Usuário: <span th:text="${emprestimo.usuario}"></span></p>
+    </section>
+
+    <a th:href="@{/livros}" class="botao voltar">
+        Voltar ao início
+    </a>
+
+</main>
+
+<footer>
+    <p>Biblioteca Central - Sistema de Consulta</p>
+</footer>
+
+</body>
+</html>
